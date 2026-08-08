@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "26306a39-3105-4cdc-9040-a90d1fbfb1a4"
+      }
+    },
+    "android": {
+      "package": "com.citizenconnect.pakistan"
+    }
+  }
+}
