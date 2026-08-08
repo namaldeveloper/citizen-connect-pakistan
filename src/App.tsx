@@ -31,7 +31,11 @@ export default function App() {
         onClick={() => setScreen(id)}
         className="flex flex-col items-center justify-center w-16"
       >
-        <div className={`mb-1 transition-all duration-300 ${isActive ? '-translate-y-1' : ''}`}>
+        <div
+  className={`flex-1 min-h-0 relative z-10 ${
+    showBottomNav ? 'pb-24' : ''
+  }`}
+>
           <Icon 
             className={`w-6 h-6 ${isActive ? 'text-[#0B6E4F]' : 'text-gray-400'}`} 
             strokeWidth={isActive ? 2.5 : 1.5}
@@ -50,7 +54,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#F4F8F5] flex items-center justify-center sm:p-8 font-sans" style={{ fontFamily: "'Inter', sans-serif" }}>
       {/* Mobile Device Simulator Wrapper */}
-      <div className="w-full h-full sm:w-[320px] sm:h-[600px] sm:rounded-[48px] bg-[#F4F8F5] relative overflow-hidden sm:border-[8px] border-gray-900 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15),0_30px_60px_-30px_rgba(0,0,0,0.2)] flex flex-col">
+      <div className="w-full h-[100dvh] sm:w-[320px] sm:h-[600px] sm:max-h-[90vh] sm:rounded-[48px] bg-[#F4F8F5] relative overflow-hidden sm:border-[8px] border-gray-900 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15),0_30px_60px_-30px_rgba(0,0,0,0.2)] flex flex-col">
         
         {/* Soft Glassmorphism Background Blobs */}
         <div className="absolute top-[-10%] left-[-10%] w-[400px] h-[400px] bg-[#0B6E4F]/10 rounded-full blur-[80px] pointer-events-none" />
